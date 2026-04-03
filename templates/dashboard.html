@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Distributed MongoDB Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{ user }}!</h1>
+        <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+
+        <div class="cards">
+            <!-- Insert -->
+            <div class="card">
+                <h2>Insert User</h2>
+                <form id="insertForm">
+                    <input type="number" name="id" placeholder="User ID" required>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <button type="submit" class="btn insert-btn">Insert</button>
+                </form>
+            </div>
+
+            <!-- Get -->
+            <div class="card">
+                <h2>Get User</h2>
+                <form id="getForm">
+                    <input type="number" name="id" placeholder="User ID" required>
+                    <button type="submit" class="btn get-btn">Get</button>
+                </form>
+            </div>
+
+            <!-- Update -->
+            <div class="card">
+                <h2>Update User</h2>
+                <form id="updateForm">
+                    <input type="number" name="id" placeholder="User ID" required>
+                    <input type="text" name="name" placeholder="New Name" required>
+                    <button type="submit" class="btn update-btn">Update</button>
+                </form>
+            </div>
+
+            <!-- Delete -->
+            <div class="card">
+                <h2>Delete User</h2>
+                <form id="deleteForm">
+                    <input type="number" name="id" placeholder="User ID" required>
+                    <button type="submit" class="btn delete-btn">Delete</button>
+                </form>
+            </div>
+        </div>
+
+        <h2>Output</h2>
+        <div id="outputCard" class="output-card" style="display:none;">
+            <table>
+                <thead>
+                    <tr><th>User ID</th><th>Name</th></tr>
+                </thead>
+                <tbody id="outputTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0; padding:0;
+    background:#f4f6f8;
+}
+
+/* Login Page */
+.login-container {
+    display:flex; justify-content:center; align-items:center; height:100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+.login-card {
+    background:#fff; padding:30px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    width:300px; text-align:center;
+}
+.login-card input {
+    width:90%; padding:10px; margin:8px 0; border-radius:6px; border:1px solid #ccc;
+}
+.login-card .login-btn {
+    background:#28a745; color:#fff; width:95%; padding:10px; border-radius:6px; border:none;
+    font-weight:bold; cursor:pointer; transition:0.3s;
+}
+.login-card .login-btn:hover { background:#218838; }
+.error { color:red; font-size:14px; }
+
+/* Dashboard */
+.container { width:90%; max-width:1000px; margin:20px auto; text-align:center; }
+h1 { color:#333; margin-bottom:10px; }
+.logout-btn { display:inline-block; margin-bottom:20px; padding:8px 12px; background:#dc3545; color:#fff; border-radius:6px; text-decoration:none; }
+.logout-btn:hover { background:#c82333; }
+
+.cards { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+.card { background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.1); width:220px; }
+.card h2 { color:#444; margin-bottom:15px; }
+input { width:90%; padding:8px; margin:5px 0; border-radius:6px; border:1px solid #ccc; outline:none; }
+input:focus { border-color:#4a90e2; }
+button.btn { width:95%; padding:10px; margin-top:8px; border:none; border-radius:6px; cursor:pointer; color:#fff; font-weight:bold; transition:0.3s; }
+button.insert-btn { background-color:#28a745; } button.insert-btn:hover { background-color:#218838; }
+button.get-btn { background-color:#17a2b8; } button.get-btn:hover { background-color:#138496; }
+button.update-btn { background-color:#ffc107; color:#333; } button.update-btn:hover { background-color:#e0a800; }
+button.delete-btn { background-color:#dc3545; } button.delete-btn:hover { background-color:#c82333; }
+
+.output-card { background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.1); width:400px; margin:20px auto; text-align:center; }
+.output-card table { width:100%; border-collapse:collapse; }
+.output-card th, .output-card td { border:1px solid #ddd; padding:8px; font-size:16px; }
+.output-card th { background-color:#4a90e2; color:white; }
+.output-card td { background-color:#f9f9f9; }
+
+/* Responsive */
+@media(max-width:768px){ .cards{flex-direction:column;align-items:center;} }
